@@ -175,12 +175,14 @@ nav ul a:hover::after {
     border-radius: 14px;
     text-align: center;
     width: 350px;
+    transition: 0.3s;
 }
 
 .depoimentos .card-item img {
     border-radius: 10%;
     width: 80px;
     display: inline-block;
+
 }
 
 .n18 {
@@ -203,5 +205,15 @@ nav ul a:hover::after {
 
 .depoimentos .card-item .estrelas {
     margin: 15px 0;
-    border-top: 2px solid #a9a9a9;
+    border-top: 2px solid #928f8f;
+}
+
+.depoimentos .card-item .estrelas i {
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+.depoimentos .card-item:hover {
+    background-color: darkgrey;
+    margin-top: -5PX;
 }
