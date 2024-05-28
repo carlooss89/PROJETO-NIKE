@@ -106,6 +106,13 @@ nav ul a:hover::after {
     width: 100%;
 }
 
+/* MENU MOBILE */
+nav .menu-icon {
+    cursor: pointer;
+    font-size: 25px;
+    display: none;
+}
+
 .banner {
     display: flex;
     justify-content: center;
@@ -153,6 +160,7 @@ nav ul a:hover::after {
 
 .faca-mais .faca-mais-img img {
     width: 100%;
+    border-radius: 5px;
 }
 
 .depoimentos h3 {
@@ -189,31 +197,86 @@ nav ul a:hover::after {
     border-radius: 10%;
     width: 100px;
     height: 107px;
-    display: block;
+    display: inline-block;
 }
 
 .depoimentos .card-item .nome-user {
     font-weight: 600;
     font-size: 20px;
     margin-bottom: 15px;
+    transition: 0.3s;
 }
 
 .depoimentos .card-item .depoimento-user {
     font-size: 15px;
     padding: 0 15px;
+    transition: 0.3s;
 }
 
 .depoimentos .card-item .estrelas {
     margin: 15px 0;
     border-top: 2px solid #928f8f;
+    transition: 0.3s;
 }
 
 .depoimentos .card-item .estrelas i {
     margin-top: 15px;
     font-size: 20px;
+    transition: 0.3s
 }
 
-.depoimentos .card-item:hover {
+/* EFEITO PARA SUBIR OS CARDS AINDA NÃO FUNCIONOU CORRETAMENTE
+
+  .depoimentos .card-item:hover {
     background-color: darkgrey;
-    margin-top: -5PX;
+    margin-top: -5PX; 
+}  */
+
+.depoimentos .card-item:hover .nome-user,
+.depoimentos .card-item:hover .depoimento-user,
+.depoimentos .card-item:hover .estrelas i {
+    color: white;
+}
+
+/* MESSAGE */
+.message h3,
+.message p {
+    text-align: center;
+    position: relative;
+    margin-top: -80px;
+}
+
+.message h3 {
+    margin-right: 50px;
+}
+
+.img-msg {
+    width: 100px;
+    position: relative;
+    bottom: 80px;
+    left: 730px;
+}
+
+.faca-mais .faca-mais-img .img-mulher {
+    border-radius: 5px;
+    width: 80%;
+    /* height: 500px;  */
+    /* display: inline-block; */
+}
+
+/* footer */
+.footer {
+    background-color: #928f8f;
+    text-align: center;
+}
+
+.footer i {
+    font-size: 25px;
+    padding: 10px;
+    margin: 3px;
+    border-radius: 10px;
+}
+
+.footer p {
+    margin-top: 10px;
 }
