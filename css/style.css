@@ -1,312 +1,309 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    outline: none;
-    font-family: "Red Rose", serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  font-family: "Red Rose", serif;
 }
 
 body {
-    background-color: #ffff;
+  background-color: #ffff;
 }
 
 section,
 .rodape {
-    padding: 54px 0;
+  padding: 54px 0;
 }
 
 h3 {
-    font-size: 50px;
+  font-size: 50px;
 }
 
 a {
-    color: #000000;
+  color: #000000;
 }
 
 .paragrafo {
-    font-size: 1.2rem;
-    color: #000000;
+  font-size: 1.2rem;
+  color: #000000;
 }
 
 .container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 5%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 5%;
 }
 
 .btn {
-    background-color: #a9a9a9;
-    padding: 15px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    display: inline-block;
-    transition: 0.1s;
+  background-color: #a9a9a9;
+  padding: 15px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  transition: 0.1s;
 }
 
 .btn {
-    animation: animate-outline 1s ease-out infinite;
+  animation: animate-outline 1s ease-out infinite;
 }
 
 @keyframes animate-outline {
-    from {
-        outline: 0px solid #d6d6d6;
-    }
+  from {
+    outline: 0px solid #d6d6d6;
+  }
 
-    to {
-        outline: 15px solid #4f9bf900;
-    }
+  to {
+    outline: 15px solid #4f9bf900;
+  }
 }
 
 header {
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 30px;
 }
 
 .logo-principal {
-    width: 170px;
+  width: 170px;
 }
 
 nav ul {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 nav ul a {
-    color: #000000;
-    margin: 0 40px;
-    text-transform: uppercase;
-    font-size: 14px;
-    display: block;
+  color: #000000;
+  margin: 0 40px;
+  text-transform: uppercase;
+  font-size: 14px;
+  display: block;
 }
 
 nav ul a:not(.btn)::after {
-    content: "";
-    background-color: #000000;
-    height: 3px;
-    width: 0%;
-    display: block;
-    margin: 0 auto;
-    transition: 0.3s;
+  content: "";
+  background-color: #000000;
+  height: 3px;
+  width: 0%;
+  display: block;
+  margin: 0 auto;
+  transition: 0.3s;
 }
 
 nav ul a:hover::after {
-    width: 100%;
+  width: 100%;
 }
 
 /* menu mobile */
 nav .menu-icon {
-    cursor: pointer;
-    font-size: 25px;
-    display: none;
+  cursor: pointer;
+  font-size: 25px;
+  display: none;
 }
 
 nav .close-icon {
-    display: none;
-    font-size: 30px;
+  display: none;
+  font-size: 30px;
 }
 
 .banner {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .banner .banner-text {
-    margin: 150px;
-    text-align: center;
-    padding: 0 90px;
+  margin: 150px;
+  text-align: center;
+  padding: 0 90px;
 }
 
 .banner .banner-text h1 {
-    font-size: 80px;
+  font-size: 80px;
 }
 
 .banner .banner-text p {
-    font-size: 20px;
-    font-style: italic;
-    color: #000000;
-    margin: 18px 0;
+  font-size: 20px;
+  font-style: italic;
+  color: #000000;
+  margin: 18px 0;
 }
 
 /* faca mais */
 .faca-mais .container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .faca-mais .faca-mais-text {
-    width: 50%;
-    padding: 0 40px;
+  width: 50%;
+  padding: 0 40px;
 }
 
 .faca-mais .faca-mais-text h3 {
-    font-size: 56px;
+  font-size: 56px;
 }
 
 .faca-mais .faca-mais-text p {
-    margin: 5px 0 10px 0;
+  margin: 5px 0 10px 0;
 }
 
 .faca-mais .faca-mais-img {
-    width: 40%;
-}
-
-.faca-mais .faca-mais-img .img-mulher {
-    border-radius: 5px;
-    width: 22rem;
-    height: 22rem;
-    object-fit: cover;
-    /* height: 500px;  */
-    /* display: inline-block; */
+  width: 40%;
 }
 
 .faca-mais .faca-mais-img img {
-    width: 100%;
-    border-radius: 5px;
+  width: 100%;
+  border-radius: 5px;
 }
 
 .depoimentos h3 {
-    text-align: center;
+  text-align: center;
 }
 
 .depoimentos p {
-    margin-bottom: 20px;
-    text-align: center;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .cards {
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  cursor: pointer;
 }
 
 .depoimentos .card-item {
-    background-color: #a9a9a9;
-    margin: 15px;
-    border-radius: 14px;
-    text-align: center;
-    width: 350px;
-    transition: 0.3s;
+  background-color: #a9a9a9;
+  margin: 15px;
+  border-radius: 14px;
+  text-align: center;
+  width: 350px;
+  transition: 0.3s;
 }
 
 .depoimentos .card-item img {
-    border-radius: 10%;
-    width: 80px;
-    display: inline-block;
-    margin-top: 5px;
-    object-fit: cover;
+  border-radius: 10%;
+  width: 80px;
+  display: inline-block;
+  margin-top: 5px;
+  object-fit: cover;
 }
 
 .n18 {
-    border-radius: 10%;
-    width: 100px;
-    height: 107px;
-    display: inline-block;
+  border-radius: 10%;
+  width: 100px;
+  height: 107px;
+  display: inline-block;
 }
 
 .depoimentos .card-item .nome-user {
-    font-weight: 600;
-    font-size: 20px;
-    margin-bottom: 15px;
-    transition: 0.3s;
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 15px;
+  transition: 0.3s;
 }
 
 .depoimentos .card-item .depoimento-user {
-    font-size: 15px;
-    padding: 0 15px;
-    transition: 0.3s;
+  font-size: 15px;
+  padding: 0 15px;
+  transition: 0.3s;
 }
 
 .depoimentos .card-item .estrelas {
-    margin: 15px 0;
-    border-top: 2px solid #928f8f;
-    transition: 0.3s;
+  margin: 15px 0;
+  border-top: 2px solid #928f8f;
+  transition: 0.3s;
 }
 
 .depoimentos .card-item .estrelas i {
-    margin-top: 15px;
-    font-size: 20px;
-    transition: 0.3s
+  margin-top: 15px;
+  font-size: 20px;
+  transition: 0.3s;
 }
 
-/* EFEITO PARA SUBIR OS CARDS AINDA NÃO FUNCIONOU CORRETAMENTE 
-
-  .depoimentos .card-item:hover {
+/* EFEITO PARA SUBIR OS CARDS AINDA NÃO FUNCIONOU CORRETAMENTE */
+  /* .depoimentos .card-item:hover {
     background-color: darkgrey;
-    margin-top: -5PX; 
-}  
-*/
+    margin-top: -5px; 
+}   */
+
 
 .depoimentos .card-item:hover .nome-user,
 .depoimentos .card-item:hover .depoimento-user,
 .depoimentos .card-item:hover .estrelas i {
-    color: white;
+  color: white;
 }
 
 /* MESSAGE */
 .message {
-    margin-top: -80px;
-    text-align: center;
+  margin-top: -80px;
+  text-align: center;
 }
 
 .message h3 {
-    text-align: center;
-    margin-right: 50px;
+  text-align: center;
+  margin-right: 50px;
 }
 
 .img-msg {
-    width: 100px;
-    margin-left: 350px;
-    margin-top: -82px;
-    /* position: relative; */
-    /* bottom: 80px; */
-    left: 730px;
+  width: 100px;
+  margin-left: 350px;
+  margin-top: -82px;
+  /* position: relative; */
+  /* bottom: 80px; */
+  left: 730px;
 }
 
 /* footer */
 .rodape {
-    background-color: #928f8f;
-    text-align: center;
+  background-color: #928f8f;
+  text-align: center;
 }
 
 .rodape i {
-    font-size: 25px;
-    padding: 10px;
-    margin: 3px;
-    border-radius: 10px;
+  font-size: 25px;
+  padding: 10px;
+  margin: 3px;
+  border-radius: 10px;
 }
 
 .rodape p {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 /* Página sobre*/
+
 .sobre .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .sobre .sobre-text {
-    width: 50%;
-    padding-right: 40px;
+  width: 100%;
+  padding-right: 40px;
 }
 
 .sobre .sobre-text p {
-    margin: 18px 0;
+  margin: 18px 0;
+}
+
+.sobre .sobre-img {
+  width: 35%;
 }
 
 .sobre .sobre-img img {
-    width: 100%;
-    border-radius: 10px;
+  width: 100%;
+  border-radius: 10px;
 }
 
 /* end página sobre */
@@ -314,100 +311,157 @@ nav .close-icon {
 /* Página modelos card1 */
 
 .container-swiper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 .slider-wrapper {
-    /* margin-bottom: 50px;  */
-    overflow: hidden;
-    max-width: 1200px;
-    margin: 5px 70px 55px;
-
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 5px 70px 55px;
 }
 
 .sneaker-img {
-    border-radius: 10px;
-    margin-bottom: 40px;
-    border: 1px solid #928f8f;
-    padding: 4px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  border: 1px solid #928f8f;
+  padding: 4px;
 }
 
 .card1-list .card1-item {
-    color: #000000;
-    user-select: none;
-    /* width: 400px;  */
-    padding: 35px;
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    /* justify-content: center; */
-    border-radius: 10px;
-    background: #d6d6d6;
-    border: 1px solid #928f8f;
-    /* margin-bottom: 40px; */
+  color: #000000;
+  user-select: none;
+  /* width: 400px;  */
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: center; */
+  border-radius: 10px;
+  background: #d6d6d6;
+  border: 1px solid #928f8f;
+  /* margin-bottom: 40px; */
 }
 
 .swiper-pagination {
-    margin-bottom: -800px;
+  margin-bottom: -800px;
 }
 
 .slider-wrapper .swiper-pagination-bullet {
-    background: #928f8f;
-    width: 15px;
-    height: 15px;
-    /* margin-top: -50%; */
+  background: #928f8f;
+  width: 15px;
+  height: 15px;
+  /* margin-top: -50%; */
 }
 
 .slider-wrapper .swiper-slide-button {
-    color: #a9a9a9;
-    margin-top: 690px;
-    transition: 0.2s ease;
+  color: #a9a9a9;
+  margin-top: 690px;
+  transition: 0.2s ease;
 }
 
 .slider-wrapper .swiper-slide-button:hover {
-    color: #928f8f;
+  color: #928f8f;
 }
 
 /* end página modelos card1 */
 
-@media(max-width: 830px) {
-    /* menu mobile */
+@media (max-width: 830px) {
+  /* menu mobile */
 
-    .menu {
-        position: fixed;
-        top: 0;
-        left: 0;
-        /* background: #928f8f; */
-        background-color: #d1cfcf;
-        width: 100%;
-        height: 100%;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        clip-path: circle(0% at 100% 0);
-        transition: 0.7s;
-    }
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* background: #928f8f; */
+    background-color: #d1cfcf;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    clip-path: circle(0% at 100% 0);
+    transition: 0.7s;
+  }
 
-    .menu.open {
-        clip-path: circle(141.4% at 100% 0);
-    }
+  .menu.open {
+    clip-path: circle(141.4% at 100% 0);
+  }
 
-    .menu a {
-        margin: 10px 0;
-        font-size: 16px;
-    }
+  .menu a {
+    margin: 10px 0;
+    font-size: 16px;
+  }
 
-    nav .menu-icon {
-        display: block;
-    }
+  nav .menu-icon {
+    display: block;
+  }
 
-    nav .close-icon {
-        display: block;
-        position: absolute;
-        top: 70px;
-        right: 35px;
-    }
+  nav .close-icon {
+    display: block;
+    position: absolute;
+    top: 70px;
+    right: 35px;
+  }
+
+  /* Pagina Home responsivo */
+  .faca-mais .faca-mais-text {
+    margin-top: 10px;
+    padding: 0 20%;
+    order: 1;
+  }
+
+  .faca-mais .container {
+    flex-direction: column;
+  }
+
+  .faca-mais .faca-mais-text h3 {
+    font-size: 48px;
+  }
+
+  .faca-mais .faca-mais-text,
+  .faca-mais .faca-mais-img {
+    width: 100%;
+  }
+
+  /* banner responsivo */
+
+  .banner .banner-text {
+    padding: 0;
+    margin: 80px;
+  }
+
+  .banner .banner-text h1 {
+    font-size: 80px;
+  }
+
+  .banner .banner-text p {
+    font-size: 15px;
+  }
+
+  .depoimentos .card-item {
+    width: 100%;
+  }
+
+  /* pagina sobre responsivo */
+
+  .sobre .container {
+    flex-direction: column-reverse;
+  }
+
+  .sobre .sobre-img,
+  .sobre .sobre-text {
+    width: 80%;
+  }
+
+  .sobre .sobre-text {
+    margin-top: 40px;
+  }
+
+  .swiper-pagination {
+    margin-bottom: -600px;
+  }
+
 }

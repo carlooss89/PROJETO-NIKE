@@ -1,16 +1,20 @@
 let menu = document.querySelector("nav .menu");
 
 function openMenu() /* Função responsável por abrir o MENU.  
-() chama a função openMenu e executa o código dentro dela*/ {
+() chama a função openMenu e executa o código dentro dela*/
+{
   menu.classList.add("open");
+
 }
 
-function closeMenu() /*() chama a função closeMenu e executa o código dentro dela*/ {
+function closeMenu() /*() chama a função closeMenu e executa o código dentro dela*/
+{
   menu.classList.remove("open");
 }
 
 // SCRIPT
-const swiper = new Swiper(".slider-wrapper", {
+const swiper = new Swiper(".slider-wrapper",
+  {
   loop: true,
   grabCursor: true,
   spaceBetween: 30,
@@ -22,13 +26,15 @@ const swiper = new Swiper(".slider-wrapper", {
   },
 
   // Navigation arrows
-  navigation: {
+    navigation:
+    {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
 
   // Responsive breakpoints
-  breakpoints: {
+    breakpoints:
+    {
     0: {
       slidesPerView: 1,
     },
