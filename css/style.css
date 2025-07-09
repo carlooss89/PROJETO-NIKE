@@ -55,10 +55,11 @@ a {
   }
 }
 
-header {
+header, .main-header {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  background-image: url('../img/img-nike-fundo-home1.jpg');
 }
 
 nav {
