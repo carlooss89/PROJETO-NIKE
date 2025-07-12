@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  outline: none;
   font-family: "Red Rose", serif;
 }
 
@@ -55,11 +54,25 @@ a {
   }
 }
 
-header, .main-header {
+header {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  background-image: url('../img/img-nike-fundo-home1.jpg');
+  min-height: 100vh;  /* Define uma altura mínima equivalente à altura da viewport */
+  display: flex; /* Adiciona flexbox para facilitar o alinhamento do banner */
+  align-items: center; /* Centraliza verticalmente o conteúdo (banner) dentro do header */
+}
+
+.header-home {
+background-image: url('../img/img-nike-fundo-home1.jpg');
+}
+
+.header-sobre {
+  background-image: url('../img/img-sobre-fundo.jpg');
+}
+
+.header-modelos {
+  background-image: url('../img/img-fundo-modelos1.jpg');
 }
 
 nav {
@@ -67,6 +80,11 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding-top: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .logo-principal {
@@ -118,9 +136,8 @@ nav .close-icon {
 }
 
 .banner .banner-text {
-  margin: 150px;
-  text-align: center;
   padding: 0 90px;
+  text-align: center;
 }
 
 .banner .banner-text h1 {
@@ -150,7 +167,11 @@ nav .close-icon {
 }
 
 .faca-mais .faca-mais-text p {
-  margin: 5px 0 10px 0;
+  margin-bottom: 20px;
+}
+
+.faca-mais .faca-mais-text p:last-child {
+  margin-bottom: 0; /* Remove a margem do último parágrafo para não criar espaço extra no final */
 }
 
 .faca-mais .faca-mais-img {
@@ -235,20 +256,46 @@ nav .close-icon {
 
 /* MESSAGE */
 .message {
-  margin-top: -80px;
   text-align: center;
 }
 
 .message h3 {
   text-align: center;
-  margin-right: 50px;
 }
 
 .img-msg {
   width: 100px;
-  margin-left: 350px;
-  margin-top: -82px;
-  left: 730px;
+}
+
+.message .container {
+  display: flex;
+  flex-direction: column; /* Coloca o h3, img e p em coluna por padrão */
+  align-items: center; /* Centraliza os itens horizontalmente */
+  justify-content: center; /* Centraliza os itens verticalmente (se houver espaço) */
+  gap: 10px; /* Espaçamento entre os itens */
+}
+
+/* Ajuste específico para alinhar o h3 e a imagem em uma linha para telas maiores */
+@media (min-width: 768px) {
+  .message .container {
+    flex-direction: row; /* Coloca o h3 e a imagem em linha */
+    flex-wrap: wrap; /* Permite que os itens quebrem a linha se não houver espaço */
+    justify-content: center; /* Centraliza os itens na linha */
+    align-items: center; /* Alinha os itens verticalmente na linha */
+  }
+  .message h3 {
+    margin: 0; /* Remove margem específica para h3 em telas maiores, pois o gap já gerencia */
+    padding-right: 15px; /* Adiciona um pequeno espaçamento à direita do h3 em relação à imagem */
+  }
+
+  .img-msg {
+    margin: 0; /* Remove margens fixas */
+  }
+
+  .message p {
+    flex-basis: 100%; /* Garante que o parágrafo ocupe toda a largura disponível abaixo do h3 e imagem */
+    margin-top: 15px; /* Adiciona um espaço acima do parágrafo */
+  }
 }
 
 /* footer */
@@ -283,7 +330,7 @@ nav .close-icon {
 }
 
 .sobre .sobre-text p {
-  margin: 18px 0;
+  margin-bottom: 20px;
 }
 
 .sobre .sobre-img {
@@ -295,7 +342,7 @@ nav .close-icon {
   border-radius: 10px;
 }
 
-/* end página sobre */
+/* Fim da página sobre */
 
 /* Página modelos card1 */
 
@@ -303,13 +350,12 @@ nav .close-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
 }
 
 .slider-wrapper {
   overflow: hidden;
   max-width: 1200px;
-  margin: 5px 70px 55px;
+  margin: 50px auto;
 }
 
 .sneaker-img {
@@ -330,10 +376,6 @@ nav .close-icon {
   border: 1px solid #928f8f;
 }
 
-.swiper-pagination {
-  margin-bottom: -800px;
-}
-
 .slider-wrapper .swiper-pagination-bullet {
   background: #928f8f;
   width: 15px;
@@ -342,7 +384,6 @@ nav .close-icon {
 
 .slider-wrapper .swiper-slide-button {
   color: #a9a9a9;
-  margin-top: 690px;
   transition: 0.2s ease;
 }
 
@@ -350,7 +391,7 @@ nav .close-icon {
   color: #928f8f;
 }
 
-/* end página modelos card1 */
+/* Fim da página modelos card1 */
 
 @media (max-width: 830px) {
   /* menu mobile */
@@ -413,7 +454,7 @@ nav .close-icon {
 
   .banner .banner-text {
     padding: 0;
-    margin: 80px;
+    margin: 80px auto;
   }
 
   .banner .banner-text h1 {
@@ -442,9 +483,4 @@ nav .close-icon {
   .sobre .sobre-text {
     margin-top: 40px;
   }
-
-  .swiper-pagination {
-    margin-bottom: -600px;
-  }
-
 }
