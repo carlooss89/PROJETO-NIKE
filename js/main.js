@@ -1,24 +1,29 @@
-let menu = document.querySelector("nav .menu");
+    const menu = document.querySelector("nav .menu");
+    const openMenuIcon = document.querySelector("nav .menu-icon");
+    const closeMenuIcon = document.querySelector("nav .close-icon");
 
-function openMenu() /* Função responsável por abrir o MENU.  
-() chama a função openMenu e executa o código dentro dela*/
-{
-  menu.classList.add("open");
+    // Adiciona o event listener para o ícone de abrir o menu
+  if (openMenuIcon) { // Verifica se o ícone de menu aberto existe
+    openMenuIcon.addEventListener("click", () => { // Adiciona o evento de clique
+      menu.classList.add("open"); // Adiciona a classe "open" ao menu
+    });
+  }
 
-}
-
-function closeMenu() /*() chama a função closeMenu e executa o código dentro dela*/
-{
-  menu.classList.remove("open");
+  // Adiciona o event listener para o ícone de fechar o menu
+if (closeMenuIcon) {
+  closeMenuIcon.addEventListener("click", () => {
+    menu.classList.remove("open");
+  });
 }
 
 // SCRIPT
-const swiper = new Swiper(".slider-wrapper",
+const swiper = new Swiper(".slider-wrapper", // swipper inicializado com a classe "slider-wrapper"
   {
   loop: true,
   grabCursor: true,
-  spaceBetween: 30,
-  // If we need pagination
+    spaceBetween: 30,
+  
+    // slides per view
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -45,4 +50,5 @@ const swiper = new Swiper(".slider-wrapper",
       slidesPerView: 3,
     },
   },
-});
+  });
+// FIM DO SCRIPT
