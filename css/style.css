@@ -55,24 +55,36 @@ a {
 }
 
 header {
+ background-attachment: fixed; /* Garante que o fundo não se mova ao rolar a página */
+}
+
+.header-home {
+background-image: url('../img/imagem-home.png');
+  background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  min-height: 100vh;  /* Define uma altura mínima equivalente à altura da viewport */
+  background-size: contain; /* Garante que a imagem ocupe todo o espaço do header */
+  min-height: 100vh; /* Garante que o header ocupe toda a altura da viewport */
   display: flex; /* Adiciona flexbox para facilitar o alinhamento do banner */
   align-items: center; /* Centraliza verticalmente o conteúdo (banner) dentro do header */
 }
 
-.header-home {
-background-image: url('../img/img-nike-fundo-home1.jpg');
-}
-
 .header-sobre {
-  background-image: url('../img/img-sobre-fundo.jpg');
+  background-image: url('../img/imagem-sobre.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; /* Garante que a imagem ocupe todo o espaço do header */
+  min-height: 100vh; /* Garante que o header ocupe toda a altura da viewport */
+  display: flex; /* Adiciona flexbox para facilitar o alinhamento do banner */    
 }
 
 .header-modelos {
-  background-image: url('../img/img-fundo-modelos1.jpg');
+  background-image: url('../img/imagem-modelos.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; /* Garante que a imagem ocupe todo o espaço do header */
+  min-height: 100vh; /* Garante que o header ocupe toda a altura da viewport */
+  display: flex; /* Adiciona flexbox para facilitar o alinhamento do banner */  
+  align-items: center; /* Centraliza verticalmente o conteúdo (banner) dentro do header */  
 }
 
 nav {
@@ -133,6 +145,7 @@ nav .close-icon {
 .banner {
   display: flex;
   justify-content: center;
+  margin-top: 50px;
 }
 
 .banner .banner-text {
@@ -326,7 +339,7 @@ nav .close-icon {
 
 .sobre .sobre-text {
   width: 100%;
-  padding-right: 40px;
+  padding-right: 90px;
 }
 
 .sobre .sobre-text p {
@@ -350,7 +363,7 @@ nav .close-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5px 0px;
+  padding: 50px 0px;
   min-height: 500px;
 }
 
@@ -372,7 +385,7 @@ nav .close-icon {
 .card1-list .card1-item {
   color: #000000;
   user-select: none;
-  padding: 5px;
+  padding: 35px;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
@@ -399,11 +412,14 @@ nav .close-icon {
 .slider-wrapper .swiper-slide-button {
   color: #000000;
   transition: 0.2s ease;
-  z-index: 10; /* Garante que os botões fiquem acima dos slides */
+  font-size: 40px;
+  top: 50%;
+  transform: translateY(-50%);  /* Centraliza os botões verticalmente */
+  z-index: 10;  /* Garante que os botões fiquem acima dos slides */
 }
 
 .swiper-button-prev { /* INÍCIO DA ALTERAÇÃO - ADICIONADO */
-  left: 0px; /* Alinha o botão "anterior" à esquerda */
+  left: 0; /* Alinha o botão "anterior" à esquerda */
 }
 
 .swiper-button-next { /* INÍCIO DA ALTERAÇÃO - ADICIONADO */
@@ -454,6 +470,7 @@ nav .close-icon {
   }
 
   /* Pagina Home responsivo */
+
   .faca-mais .faca-mais-text {
     margin-top: 10px;
     padding: 0 20%;
