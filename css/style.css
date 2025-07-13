@@ -350,12 +350,16 @@ nav .close-icon {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 5px 0px;
+  min-height: 500px;
 }
 
 .slider-wrapper {
   overflow: hidden;
   max-width: 1200px;
   margin: 50px auto;
+  padding: 0 40px;
+  position: relative;
 }
 
 .sneaker-img {
@@ -368,12 +372,22 @@ nav .close-icon {
 .card1-list .card1-item {
   color: #000000;
   user-select: none;
-  padding: 35px;
+  padding: 5px;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
   background: #d6d6d6;
   border: 1px solid #928f8f;
+  min-height: 500px; 
+  justify-content: space-between; /* Ajuda a distribuir o conteúdo verticalmente dentro do card */
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: 20px !important; 
+  width: 100%;  /* Garante que ocupe a largura total para centralização */
+  left: 0; /* Alinha a paginação à esquerda */
+  text-align: center; 
 }
 
 .slider-wrapper .swiper-pagination-bullet {
@@ -383,8 +397,17 @@ nav .close-icon {
 }
 
 .slider-wrapper .swiper-slide-button {
-  color: #a9a9a9;
+  color: #000000;
   transition: 0.2s ease;
+  z-index: 10; /* Garante que os botões fiquem acima dos slides */
+}
+
+.swiper-button-prev { /* INÍCIO DA ALTERAÇÃO - ADICIONADO */
+  left: 0px; /* Alinha o botão "anterior" à esquerda */
+}
+
+.swiper-button-next { /* INÍCIO DA ALTERAÇÃO - ADICIONADO */
+  right: 0; /* Alinha o botão "próximo" à direita */
 }
 
 .slider-wrapper .swiper-slide-button:hover {
@@ -480,7 +503,28 @@ nav .close-icon {
     width: 80%;
   }
 
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 30px; /* Ajusta a largura para dispositivos móveis */
+    height: 30px;  /* Ajusta a altura para dispositivos móveis */
+    margin: 0 5px;  /* Adiciona uma pequena margem horizontal */
+  }
+
   .sobre .sobre-text {
     margin-top: 40px;
   }
+
+  /* Lógica: Para telas menores, talvez os botões e a paginação precisem de ajustes. */
+  .slider-wrapper {
+    padding: 0 20px; /* Reduz o padding para telas menores */
+  }
+
+  .slider-wrapper .swiper-slide-button {
+    font-size: 30px; /* Reduz o tamanho do ícone para telas menores */
+  }
+
+  .swiper-pagination {
+    bottom: 5px !important; /* Ajusta a paginação para mais perto da base em telas menores */
+  }
+
 }
