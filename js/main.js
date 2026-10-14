@@ -21,7 +21,7 @@ const swiper = new Swiper(".slider-wrapper", // swipper inicializado com a class
   {
   loop: true,
   grabCursor: true,
-    spaceBetween: 30,
+  spaceBetween: 30,
   
     // slides per view
   pagination: {
