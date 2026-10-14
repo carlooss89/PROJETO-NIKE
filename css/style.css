@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #ffff;
+  background-color: var();
 }
 
 section,
@@ -371,7 +371,6 @@ nav .close-icon {
   overflow: hidden;
   max-width: 1200px;
   margin: 50px auto;
-  padding: 0 40px;
   position: relative;
 }
 
@@ -397,10 +396,11 @@ nav .close-icon {
 
 .swiper-pagination {
   position: absolute;
-  bottom: 20px !important; 
+  bottom: 20px !important; /* Garante que a paginação fique acima dos slides */
   width: 100%;  /* Garante que ocupe a largura total para centralização */
   left: 0; /* Alinha a paginação à esquerda */
   text-align: center; 
+  z-index: 15; /* Garante que a paginação fique acima dos slides */
 }
 
 .slider-wrapper .swiper-pagination-bullet {
@@ -418,12 +418,12 @@ nav .close-icon {
   z-index: 10;  /* Garante que os botões fiquem acima dos slides */
 }
 
-.swiper-button-prev { /* INÍCIO DA ALTERAÇÃO - ADICIONADO */
-  left: 0; /* Alinha o botão "anterior" à esquerda */
+.swiper-button-prev {
+  left: -50px; 
 }
 
-.swiper-button-next { /* INÍCIO DA ALTERAÇÃO - ADICIONADO */
-  right: 0; /* Alinha o botão "próximo" à direita */
+.swiper-button-next {
+  right: -50px;
 }
 
 .slider-wrapper .swiper-slide-button:hover {
@@ -532,16 +532,32 @@ nav .close-icon {
   }
 
   /* Lógica: Para telas menores, talvez os botões e a paginação precisem de ajustes. */
-  .slider-wrapper {
-    padding: 0 20px; /* Reduz o padding para telas menores */
-  }
+  
 
   .slider-wrapper .swiper-slide-button {
     font-size: 30px; /* Reduz o tamanho do ícone para telas menores */
   }
 
+  .swiper-button-prev {
+    left: -20px; /* Ajuste para mobile */
+  }
+
+  .swiper-button-next {
+    right: -20px; /* Ajuste para mobile */
+  }
+
   .swiper-pagination {
     bottom: 5px !important; /* Ajusta a paginação para mais perto da base em telas menores */
   }
+}
 
+@media (max-width: 480px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    left: -10px;
+    right: -10px; 
+  }
 }
